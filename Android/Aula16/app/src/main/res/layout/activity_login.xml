@@ -52,6 +52,20 @@
         android:layout_marginTop="24dp"
         android:text="log in" />
 
+    <TextView
+        android:id="@+id/textview_register"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="textEnd"
+        android:text="REGISTER NOW"/>
+
+    <TextView
+        android:id="@+id/textview_or"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:text="OR"/>
+
     <Button
         android:id="@+id/btn_facebook"
         android:layout_width="match_parent"
