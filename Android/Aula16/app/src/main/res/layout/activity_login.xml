@@ -1,98 +1,130 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
+<ScrollView
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context=".LoginActivity"
-    android:padding="16dp">
+    android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
 
-    <de.hdodenhof.circleimageview.CircleImageView
-        android:id="@+id/imageview_logo"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginTop="48dp"
-        android:src="@drawable/logo"
-        app:civ_border_color="@color/primary"
-        app:civ_border_width="2dp" />
-
-    <android.support.design.widget.TextInputLayout
-        android:id="@+id/text_input_email"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="48dp">
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".LoginActivity"
+        android:padding="16dp">
 
-        <android.support.design.widget.TextInputEditText
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/imageview_logo"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="48dp"
+            android:src="@drawable/logo"
+            app:civ_border_color="@color/primary"
+            app:civ_border_width="2dp" />
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/text_input_email"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Email"
-            android:inputType="textEmailAddress"/>
-    </android.support.design.widget.TextInputLayout>
+            android:layout_marginTop="48dp">
 
-    <android.support.design.widget.TextInputLayout
-        android:id="@+id/text_input_password"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp">
+            <android.support.design.widget.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Email"
+                android:inputType="textEmailAddress"/>
+        </android.support.design.widget.TextInputLayout>
 
-        <android.support.design.widget.TextInputEditText
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/text_input_password"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Password"
-            android:inputType="textPassword"/>
-    </android.support.design.widget.TextInputLayout>
+            android:layout_marginTop="8dp">
 
-    <Button
-        android:id="@+id/btn_login"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        style="@style/Widget.AppCompat.Button.Colored"
-        android:layout_marginTop="24dp"
-        android:text="log in" />
+            <android.support.design.widget.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Password"
+                android:inputType="textPassword"/>
+        </android.support.design.widget.TextInputLayout>
 
-    <TextView
-        android:id="@+id/textview_register"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textAlignment="textEnd"
-        android:text="REGISTER NOW"/>
+        <Button
+            android:id="@+id/btn_login"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:layout_marginTop="24dp"
+            android:text="log in" />
 
-    <TextView
-        android:id="@+id/textview_or"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textAlignment="center"
-        android:text="OR"/>
+        <TextView
+            android:id="@+id/textview_register"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="textEnd"
+            android:text="REGISTER NOW"
+            android:gravity="end" />
 
-    <Button
-        android:id="@+id/btn_facebook"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        style="@style/Widget.AppCompat.Button.Colored"
-        android:layout_marginTop="24dp"
-        android:backgroundTint="@color/facebook"
-        android:drawableLeft="@drawable/ic_facebook"
-        android:text="login with facebook" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="24dp">
 
-    <Button
-        android:id="@+id/btn_twitter"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        style="@style/Widget.AppCompat.Button.Colored"
-        android:backgroundTint="@color/twiter"
-        android:drawableLeft="@drawable/ic_twitter"
-        android:text="login with twitter" />
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_weight="3"
+                android:background="@color/divider"
+                android:layout_gravity="center"/>
 
-    <Button
-        android:id="@+id/btn_google"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        style="@style/Widget.AppCompat.Button.Colored"
-        android:backgroundTint="@color/google"
-        android:drawableLeft="@drawable/ic_google"
-        android:text="login with google" />
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="OR"
+                android:gravity="center"/>
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_weight="3"
+                android:background="@color/divider"
+                android:layout_gravity="center"/>
+
+        </LinearLayout>
 
 
-</LinearLayout>
+
+        <Button
+            android:id="@+id/btn_facebook"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:layout_marginTop="24dp"
+            android:backgroundTint="@color/facebook"
+            android:drawableLeft="@drawable/ic_facebook"
+            android:text="login with facebook" />
+
+        <Button
+            android:id="@+id/btn_twitter"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:backgroundTint="@color/twiter"
+            android:drawableLeft="@drawable/ic_twitter"
+            android:text="login with twitter" />
+
+        <Button
+            android:id="@+id/btn_google"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:backgroundTint="@color/google"
+            android:drawableLeft="@drawable/ic_google"
+            android:text="login with google" />
+
+
+    </LinearLayout>
+
+</ScrollView>
