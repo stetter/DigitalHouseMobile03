@@ -1,5 +1,6 @@
 package br.com.stetter.calculadora;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -9,26 +10,33 @@ import android.widget.TextView;
 public class MainActivity extends AppCompatActivity {
 
     private Button button7;
+    private Button button8;
     private TextView textViewResultado;
-    private int resultado = 0;
+    private String resultado;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        button7 = findViewById(R.id.btn_7);
+        button7 = (Button) findViewById(R.id.btn_7);
+        button8 = (Button) findViewById(R.id.btn_8);
+        textViewResultado = findViewById(R.id.txtview_Resultado);
 
         button7.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                resultado = 10;
+                resultado = "Deu certo";
+                textViewResultado.setText(resultado);
             }
         });
 
-//        textViewResultado = findViewById(R.id.txtview_Resultado);
-//
-//        textViewResultado.setText(resultado);
-
+        button8.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                resultado = "Guilherme vai perder no pingue pongue!!!";
+                textViewResultado.setText(resultado);
+            }
+        });
     }
 }
